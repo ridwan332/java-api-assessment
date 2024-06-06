@@ -1,4 +1,4 @@
-package com.cbfacademy.flowershop;
+package com.cbfacademy.apiassessment.flowershop;
 
 import java.math.BigDecimal;
 import jakarta.persistence.Column;

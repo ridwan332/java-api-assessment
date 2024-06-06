@@ -1,4 +1,4 @@
-package com.cbfacademy.flowershop;
+package com.cbfacademy.apiassessment.flowershop;
 import java.util.List;
 import java.util.NoSuchElementException;
 import org.springframework.beans.factory.annotation.Autowired;

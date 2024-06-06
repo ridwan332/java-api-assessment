@@ -1,4 +1,4 @@
-package com.cbfacademy.flowershop;
+package com.cbfacademy.apiassessment.flowershop;
 import java.util.List;
 import org.springframework.data.repository.ListCrudRepository;
 
@@ -20,6 +20,6 @@ public interface FlowerShopRepository extends
      * @param name the name of the lender
      * @return a list of IOUs that match the lender's name
      */
-    List<FlowerShop> searchByolace(String name);
+    List<FlowerShop> searchByplace(String place);
 
 }
