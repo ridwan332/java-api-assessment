@@ -17,6 +17,9 @@ public class FlowerShop {
    private String place;
    private String type;
    private String name;
+   
+  public FlowerShop() {
+  }
   public FlowerShop(String place, String type, String name) {
     this.place = place;
     this.type = type;

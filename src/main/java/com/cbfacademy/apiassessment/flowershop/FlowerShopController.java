@@ -37,45 +37,45 @@ public class FlowerShopController {
   public List<FlowerShop> getAllflowershops() {
       return flowershopService.getAllflowershops();
   }
-  /* 
+   
   @GetMapping("/{id}")
-  public IOU getId(@PathVariable UUID Id) {
+  public FlowerShop getId(@PathVariable Long Id) {
     try{
-   return iouService.getIOU(Id);
+   return flowershopService.getflowershop(Id);
   }catch(NoSuchElementException e){
     throw new ResponseStatusException(HttpStatus.NOT_FOUND,e.getMessage(),e);
   }
   }
-  @PostMapping("iou")
-  public IOU postIou(@RequestBody IOU iou) {
+  @PostMapping()
+  public FlowerShop postIou(@RequestBody FlowerShop flowershop) {
      try{
-      return iouService.createIOU(iou);
+      return flowershopService.createFlowerShop(flowershop);
      }catch(IllegalArgumentException e){
       throw new ResponseStatusException(HttpStatus.BAD_REQUEST,e.getMessage(),e);
      }
   }
   @PutMapping("{id}")
-  public IOU putIou(@PathVariable IOU id, @RequestBody IOU iou) {
+  public FlowerShop putFlowerShop(@PathVariable Long id, @RequestBody FlowerShop flowershop) {
      try{
-    return iouService.updateIOU(null, iou);
+    return flowershopService.updateFlowerShop(null, flowershop);
      }catch(IllegalArgumentException  e)
      {
       throw new ResponseStatusException(HttpStatus.BAD_REQUEST,e.getMessage(),e);
      }
   }
   @DeleteMapping("{id}")
-  public ResponseEntity<?> deleteIou(@PathVariable UUID id) {
+  public ResponseEntity<?> deleteFlowerShop(@PathVariable Long id) {
     try {
-      iouService.deleteIOU(id);
+      flowershopService.deleteFlowerShop(id);
 
       return ResponseEntity.noContent().build();
   } catch (NoSuchElementException exception) {
-      throw new ResponseStatusException(HttpStatus.NOT_FOUND, "IOU Not Found", exception);
+      throw new ResponseStatusException(HttpStatus.NOT_FOUND, "FlowerShop Not Found", exception);
   } catch (RuntimeException exception) {
       throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, exception.getMessage(), exception);
   }
   
 }
-*/
+
 }
 
