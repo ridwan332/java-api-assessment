@@ -2,15 +2,21 @@ package com.cbfacademy.apiassessment.flowershop;
 
 import java.util.List;
 import java.util.NoSuchElementException;
+
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 @Service
 public class FlowerShopService implements FlowerService {
 
     private final FlowerShopRepository flowershoprepository;
+    private final FlowerCriteriaRepository flowerCriteriaRepository;
 
-    public FlowerShopService(FlowerShopRepository flowershoprepository) {
+
+    public FlowerShopService(FlowerShopRepository flowershoprepository,
+            FlowerCriteriaRepository flowerCriteriaRepository) {
         this.flowershoprepository = flowershoprepository;
+        this.flowerCriteriaRepository = flowerCriteriaRepository;
     }
 
     public List<FlowerShop> getAllflowershops() {
@@ -18,6 +24,12 @@ public class FlowerShopService implements FlowerService {
 
     }
 
+
+    public Page<FlowerShop> getFlowers(FlowerPage FlowerPage, FlowerSearchCriteria flowerSearchCriteria){
+        return flowerCriteriaRepository.finAllWithfilters(FlowerPage, flowerSearchCriteria);
+    }
+
+    
     FlowerShop getflowershop(Long id) throws NoSuchElementException {
         return flowershoprepository.findById(id).orElseThrow();
     }
