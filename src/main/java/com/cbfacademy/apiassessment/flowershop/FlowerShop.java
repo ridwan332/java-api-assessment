@@ -1,12 +1,15 @@
 package com.cbfacademy.apiassessment.flowershop;
+import java.time.LocalDateTime;
 
-import java.math.BigDecimal;
-import jakarta.persistence.Column;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+
 @Entity
 @Table( name = "flowerShop")
 public class FlowerShop {
@@ -17,7 +20,13 @@ public class FlowerShop {
    private String place;
    private String type;
    private String name;
+
+   @CreationTimestamp
+   private LocalDateTime dateCreated;
+   @UpdateTimestamp
+   private LocalDateTime dateUpdated;
    
+  
   public FlowerShop() {
   }
   public FlowerShop(String place, String type, String name) {
@@ -50,6 +59,16 @@ public class FlowerShop {
           this.name = name;
         }
 
-   
-
+        public LocalDateTime getDateCreated() {
+          return dateCreated;
+        }
+        public void setDateCreated(LocalDateTime dateCreated) {
+          this.dateCreated = dateCreated;
+        }
+        public LocalDateTime getDateUpdated() {
+          return dateUpdated;
+        }
+        public void setDateUpdated(LocalDateTime dateUpdated) {
+          this.dateUpdated = dateUpdated;
+        }
   }
