@@ -7,11 +7,11 @@
 This is my RESTful API  that allows users to `create`, `read`, `update`, and `delete`it also `fillters` my data using name or type and `sorts` the results i also added pageing just to controll the page size
 
 ### implementing  Data structure algorithams DSA using apring Data JPA
- I have two Repisitory one for adding data and one for the writing JPA QUERY
-in  my criteria Repository i used the The Java Persistence Criteria API to be able to use things like EntityManager,criteriaBuilder and to be able to count aswell counting  so the main point of this to sort, search  and filter data 
+ I have two Repisitory one for adding data and one for the writing JPA Query Language
+in  my criteria Repository i used the The Java Persistence Criteria API to be able to use things like EntityManager,criteriaBuilder and to be able to count aswell   so the main point of this is  to sort, search  and filter data 
 i have to more classes for the this one for search criteria and for pageing 
-then its my servise which also implements an interface i made for the search api when i wanted to use  native sql queries but later when i changed my mind to use jpa i decided to keep it aswell
-and the my controller 
+then its my servise which also implements an interface i made for the search api when i wanted to use  native sql queries but later when i changed my mind to use jpql i decided to keep it aswell
+and then i have  my controller 
 this is how the endpoint  look like 
 | -------- | ---------------- | -------------------- |
 | `GET`    | `API/flowershops`      | Get all flowers         |
@@ -47,11 +47,11 @@ For `POST` and `PUT` requests, you'll need to provide a request body in JSON for
   "name": "blueRose",
   "type": "Rose",
   "place": "shop5",
-  "DateCreated": "2023-11-02T14:30:00Z",
-  "DateUpdated": "2024-01-02T14:30:00Z"
+  "DateCreated": "",
+  "DateUpdated": ""
 }
 ```
-**note: you dont need to add ID,DateUpdated or DateCreated becouse those will be created for you Automatically **
+**note: you dont need to add ID,DateUpdated or DateCreated becouse those will be created for you Automatically  thas why i have them null**
 
 [1]: https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Repository.html
 [2]: https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Service.html
