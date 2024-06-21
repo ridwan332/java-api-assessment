@@ -33,7 +33,7 @@ public class FlowerShopController {
   {
     return ResponseEntity.ok(flowershopService.searchFlowers(query));
   }
-  @GetMapping
+  @GetMapping("fillter")
   public ResponseEntity<Page<FlowerShop>> getFlower(FlowerPage flowerPage,FlowerSearchCriteria flowerSearchCriteria){
     return new ResponseEntity<>(flowershopService.getFlowers(flowerPage,flowerSearchCriteria),HttpStatus.OK);
   }
