@@ -29,7 +29,7 @@ public class FlowerShopController {
       return flowershopService.getAllflowershops();
   }
   @GetMapping("search")
-  public ResponseEntity <List<FlowerShop>>searchflowerr( @RequestParam("query") String query)
+  public ResponseEntity <List<FlowerShop>>searchflowerr( @RequestParam String query)
   {
     return ResponseEntity.ok(flowershopService.searchFlowers(query));
   }

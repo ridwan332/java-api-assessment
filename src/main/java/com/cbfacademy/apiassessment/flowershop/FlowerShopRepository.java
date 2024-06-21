@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 public interface FlowerShopRepository extends 
              JpaRepository<FlowerShop, Long> {
 
-  /*filtering items using jpql query you can also use native sql queries but im using this for now */
+  /*filtering items using jpa query you can also use native sql queries but im using this for now */
 
     @Query("SELECT Flower FROM FlowerShop Flower WHERE " +"Flower.name LIKE CONCAT ('%',:query, '%')" + " or Flower.type LIKE CONCAT('%', :query, '%')")
     List<FlowerShop> searchFlower(String query);
