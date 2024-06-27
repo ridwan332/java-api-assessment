@@ -1,10 +1,10 @@
 # **Java API Assessment**
 
 ## **Introduction Flowershop Api Magagement**# : FlowerShop 
-
+  this is flowershop api specifically dealing with querying and sorting data from a flower shop database. This repository uses JPA Criteria API to build and execute dynamic queries based on the provided filters and sorting options
 ## Description
 
-This is my RESTful API  that allows users to `create`, `read`, `update`, and `delete`it also `fillters` my data using name or type and `sorts` the results i also added pageing just to controll the page size
+The api allows users to `create`, `read`, `update`, and `delete` it also `fillters`  data using name or type and `sorts` the results i also added pageing just to controll the page size
 
 ### implementing  Data structure algorithams DSA using apring Data JPA
  I have two Repisitory one for adding data and one for the writing JPA Query Language
@@ -14,13 +14,13 @@ then its my servise which also implements an interface i made for the search api
 and then i have  my controller 
 this is how the endpoint  look like 
 | -------- | ---------------- | -------------------- |
-| `GET`    | `API/flowershops`      | Get all flowers         |
-| `GET`    | `API/flowershops/{id}` | Get a flower by id     |
-| `POST`   | `API/flowershops"`      | Add a Iflower          |
-| `PUT`    | `API/flowershops/{id}` | Replace a flower by Id |
-| `DELETE` | `API/flowershops"/{id}` | Delete a flower by id  |
-|`search` | `API/flowershops"/{name or type}` | search a flower by name or type  |
-| `filtter` | `API/flowershops"/{sort,fillter and pageing}` | filtter,and sorts  flowers by name or type and set them a page size  |
+1. `GET`    | `API/flowershops`      | Get all flowers         |
+2. `GET`    | `API/flowershops/{id}` | Get a flower by id     |
+3. `POST`   | `API/flowershops`      | Add a Iflower          |
+4. `PUT`    | `API/flowershops/{id}` | Replace a flower by Id |
+5. `DELETE` | `API/flowershops/{id}` | Delete a flower by id  |
+6. `search` | `API/flowershops/{name or type}` | search a flower by name or type  |
+7. `filtter` | `API/flowershops/{fillter }` | filtter,and sorts  flowers by name or type and set them a page size  |
 
 To start the API from the terminal, run the following command:
 
@@ -47,8 +47,8 @@ For `POST` and `PUT` requests, you'll need to provide a request body in JSON for
   "name": "blueRose",
   "type": "Rose",
   "place": "shop5",
-  "DateCreated": "",
-  "DateUpdated": ""
+  "DateCreated": ,
+  "DateUpdated": 
 }
 ```
 **note: you dont need to add ID,DateUpdated or DateCreated becouse those will be created for you Automatically  thas why i have them null**

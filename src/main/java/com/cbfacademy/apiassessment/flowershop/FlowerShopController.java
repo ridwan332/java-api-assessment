@@ -34,7 +34,7 @@ public class FlowerShopController {
     return ResponseEntity.ok(flowershopService.searchFlowers(query));
   }
   @GetMapping("fillter")
-  public ResponseEntity<Page<FlowerShop>> getFlower(FlowerPage flowerPage,FlowerSearchCriteria flowerSearchCriteria){
+  public ResponseEntity<Page<FlowerShop>> getFlower(FlowerPage flowerPage, FlowerSearchCriteria flowerSearchCriteria){
     return new ResponseEntity<>(flowershopService.getFlowers(flowerPage,flowerSearchCriteria),HttpStatus.OK);
   }
    
@@ -46,8 +46,8 @@ public class FlowerShopController {
     throw new ResponseStatusException(HttpStatus.NOT_FOUND,e.getMessage(),e);
   }
   }
-  @PostMapping()
-  public FlowerShop postaflower(@RequestBody FlowerShop flowershop) {
+  @PostMapping("/{id}")
+  public FlowerShop postaflower(@PathVariable Long id,@RequestBody FlowerShop flowershop) {
      try{
       return flowershopService.createFlowerShop(flowershop);
      }catch(IllegalArgumentException e){
