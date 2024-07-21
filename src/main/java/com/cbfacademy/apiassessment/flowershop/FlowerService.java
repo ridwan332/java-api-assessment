@@ -6,4 +6,3 @@ public interface FlowerService {
   List<FlowerShop> searchFlowers(String query);
 }
 
- 
